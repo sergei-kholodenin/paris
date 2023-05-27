@@ -77,7 +77,7 @@ function TestTakePage() {
                     <p>В тесте "{infoTest.test}" - {infoTest.entry_questions} вопрос{
                     10 < infoTest.entry_questions && infoTest.entry_questions <21 ? 'ов' : 
                     1 < +(infoTest.entry_questions).toString().at(-1) && +(infoTest.entry_questions).toString().at(-1) < 5 ? 'а' : +(infoTest.entry_questions).toString().at(-1) === 1 ? '' : 'ов'}. <br/>
-                    Для прожождения нужно набрать {infoTest.entry_percent}% правильных ответов. <br/>
+                    Для прохождения нужно набрать {infoTest.entry_percent}% правильных ответов. <br/>
                      Слева от вариантов отмечайте свой ответ. Ответов может быть несколько на один вопрос.<br/> Для прохождения нажмите "Начать".</p>
                     <div className='btn-container'>
                         <button onClick={() => transferHandler(1, infoTest.entry_questions)}>Начать</button>
