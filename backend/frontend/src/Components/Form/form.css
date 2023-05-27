@@ -1,0 +1,116 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 4rem auto;
+    padding: 2rem 4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    animation: slideInProfile .3s 1 ease-in;
+}
+
+@keyframes slideInProfile {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }    
+}
+
+.container {
+    padding: 0;
+    background-image: linear-gradient(45deg, hsla(345, 100%, 66%, .7) 0%, hsl(345, 100%, 80%, 0.7) 50%, hsl(345, 100%, 90%, .7) 100%), url('../../../public/images/bg.png');
+}
+
+.form-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: hsl(0,0%,30%);
+    padding: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 3.5rem;
+}
+
+.form-btn:focus {
+    outline: 0;
+}
+
+.form-btn:hover {    
+    background-color: hsla(345, 100%, 66%);
+    color: #fff;
+}
+
+.form-btn:disabled {
+    background-color: hsl(0,0%,60%);
+}
+
+.form-btn:disabled:hover {    
+    background-color: hsl(0,0%,60%);
+}
+
+.form-btn:active {
+    transform: scale(.98);
+}
+
+.form-btn:disabled:active {    
+    transform: none;
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.form-input{
+    background-color: transparent;
+    border: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.form-input:focus,
+.form-input:valid {
+    outline: 0;
+    border-bottom-color: hsla(345, 100%, 66%);
+}
+
+.form-label {
+    position:absolute;
+    top: 15px;
+    left:0;
+}
+
+
+@media(max-width: 800px) {
+    .form-container {
+        width: 98%;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+    .form-container h1 {
+        margin-bottom: 10px;
+    }
+    .text {
+        margin-top: 10px;
+    }
+}
+

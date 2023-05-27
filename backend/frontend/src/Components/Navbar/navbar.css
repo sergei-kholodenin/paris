@@ -1,0 +1,312 @@
+h2 {
+    font-size: 1rem;
+}
+
+.nav-container {
+    height: 4rem;
+    width: 100vw;
+    background-color: #FF527D;
+    background-image: linear-gradient(0deg, rgba(255,255,255,.7) 0%, rgba(255,82,125,1) 15%, rgba(255,82,125,1) 85%,rgba(255,255,255,.7) 100%);
+    color:white;
+    position:fixed;
+    top: 0;
+    z-index:1;
+}
+
+.nav-blocks {
+    max-width: 1200px;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.nav-bl {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-left: #fff 3px solid;    
+    text-transform: uppercase;    
+}
+
+.nav-bl h2 i {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+.nav-bl.active {
+    border: 1px #fff solid;
+    background-color:#fff;    
+    /* box-shadow: 0 0 2rem rgba(255, 255, 255, 1); */
+}
+
+.nav-bl a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bl.active a {
+    color:#FF527D;
+}
+
+.nav-bl:hover a {
+    color:#FF527D;
+}
+
+.nav-bl:hover {
+    /* border: 1px #fff solid; */
+    /* border-radius: 10px; */
+    background-color:#fff;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+    background-image: radial-gradient( rgba(255,255,255,.7) 65%, rgba(255,82,125,1) 100%);
+
+}
+
+.nav-bl:hover:last-child {
+    background-image: none;
+    background-color:inherit;
+    box-shadow: none;
+    color:#fff;
+}
+
+.btn-nav-logo {
+    height: 4rem;
+    width: 12rem;
+    min-width: 12rem;
+    background-image: url('../../logo.svg') ;
+    background-repeat: no-repeat;
+    z-index: 100;
+    cursor: pointer;
+    background-position: center;
+}
+
+.btn-nav-logo:hover {
+    background-color:#fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+}
+
+.nav-menu {
+    visibility: hidden;
+}
+
+.toggle-btn {
+    display: block;
+    position: relative;
+    width: 6rem;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    color:#FF527D;
+    outline: none;
+}
+
+.moving-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:0;
+    right: 0;
+    width: 240px;
+    /* height: 10rem; */
+    border: none;
+    z-index: -1;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateX(calc(-100% - 10px));
+}
+
+
+
+.menu-btn {
+    display: block;
+    text-align: center;
+    height: 3rem;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);    
+    border-top: #fff 1px solid;
+    padding: 1rem;
+    transform: translateY(-300%);    
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-btn:first-child {
+    cursor: default;
+    margin: 0 auto;
+    height: 4rem;
+}
+
+.menu-btn:first-child h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 90%;
+}
+
+.menu-btn:hover:first-child {
+    color: #fff;
+    background-color: rgba(0,0,0,.4);
+}
+
+.menu-btn:nth-child(3) {
+    border-top: none;
+    height: 4rem;
+}
+
+.menu-btn:hover {
+    color:#FF527D;
+    background-color: rgba(0,0,0,.3);
+}
+
+.toggle-btn i {
+    text-align: center;
+}
+
+.moving-block.active {
+    visibility:visible;
+}
+
+.menu-btn.active {
+    transform: translateY(10px);
+    transition: all 0.6s ease-in-out;
+}
+
+@media(max-width: 800px) {
+
+    .moving-block {        
+        width: 200px;
+        transform: translateX(-100%) translateY(-100%);
+    }
+
+    .menu-btn {
+        transform: translateY(300%);
+    }
+    
+    .nav-blocks {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        position: absolute;
+        top:4rem;
+        right: 0;
+        transform: translateX(100%);
+        justify-content: flex-start;
+        align-items: flex-end;
+        transition: 0.6s ease-in-out;
+        opacity: 0;
+    }
+
+    .nav-blocks.hidden {
+        transform: translateX(0%);
+        transition: 0.6s ease-in-out;
+        opacity: 1;
+    }
+
+    .nav-blocks:first-child {
+        border-top:#fff 3px solid;        
+    }
+
+    .nav-bl {
+        background-color: hsl(345, 100%, 76%);
+        border-bottom: 3px #FF527D solid;
+        /* border-radius: 10px; */
+        width: 50vw;
+        min-width: 12rem;
+    }
+
+    .nav-bl:hover:last-child {
+        background-color: hsl(345, 100%, 76%);
+    }
+
+
+    .btn-nav-logo {
+        display: none;
+    }
+
+    .btn-nav-logo-small {
+        height: 4rem;
+        width: 12rem;
+        min-width: 12rem;
+        background-image: url('../../logo.svg') ;
+        background-repeat: no-repeat;
+        z-index: 100;
+        cursor: pointer;
+        background-position: center;
+    }
+
+    .nav-menu {
+        visibility:visible;
+        display: flex;
+        flex-direction: column;
+        width: 2.8rem;
+        height: 3rem;
+        background-color:#FF527D;
+        border: #fff 3px solid;
+        opacity: .7;
+        border-radius: 10px;
+        position: absolute;
+        top:.5rem;
+        right: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .nav-menu-line.first,
+    .nav-menu-line.second,
+    .nav-menu-line.third {
+        height: .2rem;
+        width: 1.8rem;
+        margin: 0.1rem;
+        border-radius: 5px;
+        background-color: #fff;
+        transition: .3s ease-in-out;
+    }
+
+    .nav-menu:hover {
+        opacity: .9;
+        box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+    }
+
+    .nav-menu.hidden .nav-menu-line.first {
+        transform:rotate(45deg) translateY(0.3rem) translateX(0.25rem);
+        width: 1.8rem;
+        transform-origin: center;
+        transition: .3s ease-in-out;
+    }
+
+    .nav-menu.hidden .nav-menu-line.third {
+        transform:rotate(-45deg) translateY(-0.3rem) translateX(0.25rem);
+        width: 1.8rem;
+        transition: .3s ease-in-out;
+    }
+
+    .nav-menu.hidden .nav-menu-line.second {
+        transform: translateY(1rem);
+        width: 1.8rem;
+        transition: .3s ease-in-out;
+    }
+
+    
+    .btn-nav-logo-small:hover {
+        background-color:#fff;
+        border-radius: 50%;
+        box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+}
+    
+}
+

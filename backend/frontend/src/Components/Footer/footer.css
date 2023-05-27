@@ -1,0 +1,15 @@
+footer {
+    width: 100vw;
+    height: 1.5rem;
+    position:fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: hsl(0,0%,60%);
+    color: hsl(0,0%,30%);  
+    border-top:hsl(0,0%,30%) 3px solid;
+}
+
+footer h3 {
+    margin-top: 0;
+    font-size: .7rem;
+}

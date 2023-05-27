@@ -1,0 +1,98 @@
+.first-stores {
+    width: 10%;
+    text-align: center;
+}
+.second-stores {
+    width: 30%;
+}
+.third-stores {
+    width: 20%;
+    text-align: center;
+}
+.fourth-stores {
+    width: 10%;
+    text-align: center;
+}
+.fivth-stores {
+    width: 30%;
+}
+
+.btn-stores {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+button.edit-btn {
+    margin: 3px;
+    width: 50%;
+}
+
+.store-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.select {
+    border: none;
+    border-radius: 50px;
+    width: 28%;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 80%;
+    color: hsl(0,0%,30%);
+}
+
+.select:focus {
+    outline: none;
+}
+
+
+td {
+    padding: 5px 2px;
+}
+
+.hide {
+    display: none;
+}
+
+.create-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    /* margin-top: 1rem; */
+}
+
+.create-btns button {
+    background-color: #fff;
+    border-radius: 50px;
+    padding: .5rem;
+    color: hsl(0,0%,30%);
+    width: 23%;
+    margin: 0;
+}
+
+.label-create {
+    background-color: hsl(0,0%,30%);
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    margin: 0.5rem auto 0.5rem;
+    border-radius: 50px;
+}
+
+@media (max-width:640px) {
+    table, .label-create, .create-btns {
+        width: 95%;
+    }
+
+}

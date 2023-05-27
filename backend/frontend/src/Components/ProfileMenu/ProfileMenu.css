@@ -1,0 +1,28 @@
+.moving-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+    background-color: black;
+    border: none;
+}
+
+
+
+.menu-btn {
+    text-align: center;
+    height: 3rem;
+    width: 100%;
+    border: 1px black solid;
+}
+
+.moving-block.active {
+    transform: translateY(0);
+    transition: all 0.4s ease-in-out;
+    visibility:visible;
+}

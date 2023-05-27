@@ -1,0 +1,34 @@
+.first-edit {
+    width: 5%;
+}
+.second-edit {
+    width: 65%;
+    padding: 0;
+    margin: 0 auto;
+}
+.second-edit table {
+    width: 100%;
+    margin: 0;
+    font-size: 120%;
+    background-color: inherit;
+    box-shadow: none;
+}
+.second-edit table td {
+    width: 50%;
+}
+.third-edit {
+    width:10%;
+}
+.third-edit button {
+    display: block;
+    margin: 0;
+    background-color: hsl(0,0%,90%);
+    color: hsl(0,0%,50%);
+    border: hsl(0,0%,50%) 1px solid;
+}
+.fourth-edit {
+    width:20%;
+}
+.edit {
+    padding: .5rem;
+}

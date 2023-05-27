@@ -1,0 +1,15 @@
+/* 	hsl(345, 100%, 66%) #FF527D #191D32 #282F44 #453A49 #6D3B47*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 4rem 0 0 0;
+  height: 100vh;
+  background-color: hsl(0,100%,98%);
+  position: relative;
+}

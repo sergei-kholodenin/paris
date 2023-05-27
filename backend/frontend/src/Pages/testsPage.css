@@ -1,0 +1,80 @@
+table {
+    width: 80%;
+    border: none;
+    box-shadow: 0 0 10px hsla(0,0%,30%,80%);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 3rem auto 3rem;
+    /* position: absolute;
+    top: 15%;
+    left: 50%; */
+    /* transform: translateX(-50%); */
+    font-size: 80%;
+    background-color: #fff;
+}
+
+caption {
+    font-size: 1.5rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: hsl(0,0%,30%);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px hsla(0,0%,30%,80%);
+}
+
+thead {
+    background-color: hsla(0,0%,30%,80%);
+    color: #fff;
+    text-transform: uppercase;
+    height: 2.5rem;
+}
+
+tr {
+    height: 2rem;   
+}
+
+tr:hover {
+    background-color: hsla(0,0%,30%,30%);
+}
+
+tr:nth-child(2n) {
+    background-color: hsl(0, 0%, 90%);
+}
+
+tr:hover:nth-child(2n) {
+    background-color: hsla(0,0%,30%,30%);
+}
+
+td {
+    padding: 1rem; 
+}
+
+.link {
+    text-decoration: none;
+    color: hsl(0,0%,30%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+}
+
+.first {
+    width: 20%;
+}
+
+.second {
+    width: 60%;
+}
+
+.third {
+    width: 20%;
+}
+
+
+@media(max-width: 640px) {
+    table {
+        width: 95%;
+    }
+}
