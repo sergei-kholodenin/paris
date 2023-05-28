@@ -4,7 +4,7 @@
     position:absolute;
     top: 50%;
     left: 50%;
-    height: 60%;
+    height: 80%;
     width: 60vw;
     background-color: #fff;
     transform: translate(-50%, -50%);
@@ -28,8 +28,8 @@
     flex-direction: row;
     position: absolute;
     top: 0;
-    left: 0;    
-    height: 100%;
+    left: 0;   
+    height: 100%; 
     transform: translateX(0);
     transition: .6s ease-in-out;
 }
@@ -68,6 +68,7 @@
 .test-card h2 {
     background-color: #d0d0d0;
     width: 100%;
+    font-size: 90%;
     text-align: center;
     border-radius: 50px;
     padding: 0.5rem .5rem;
@@ -75,6 +76,7 @@
 
 .test-card span {
     background-color: #d0d0d0;
+    font-size: 80%;
     width: 100%;
     border-radius: 50px;
     padding: 0.5rem .5rem;
