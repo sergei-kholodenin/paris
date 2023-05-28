@@ -45,7 +45,7 @@ function StatisticsPage() {
                 store.users.forEach(user => {
                     let pos = {}
                     pos[user.position.name] = positions[user.position.name];
-                    pos[user.position.name] = pos[user.position.name].map(testId => user.results.find(result => result.test === testId && +result.percent * 100 > result.test_desc.entry_percent) ? 1 : 0);
+                    pos[user.position.name] = pos[user.position.name].map(testId => user.results.find(result => result.test === testId && +result.percent * 100 > result.test_desc.entry_percent && (new Date() - new Date(result.createdAt))/(3600 * 24 * 1000) < 31) ? 1 : 0);
                     storePos = [...storePos, ...pos[user.position.name]]
                     oneUser.push(pos);                  
                     

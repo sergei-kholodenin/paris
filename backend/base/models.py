@@ -50,7 +50,7 @@ class Test(models.Model):
 
 class Question(models.Model):
     test_id = models.ForeignKey(Test, blank=False, null=False, on_delete=models.CASCADE)
-    question = models.CharField(max_length=255, blank=False, null=False)
+    question = models.TextField(blank=False, null=False)
     createdAt = models.DateTimeField(auto_now_add=True)
     id = models.AutoField(primary_key=True, editable=False)
 
@@ -60,7 +60,7 @@ class Question(models.Model):
 
 class Variant(models.Model):
     question_id = models.ForeignKey(Question, null=False, blank=False, on_delete=models.CASCADE)
-    variant = models.CharField(max_length=255, blank=False, null=False)
+    variant = models.TextField(blank=False, null=False)
     is_right = models.BooleanField(default=False)
     createdAt = models.DateTimeField(auto_now_add=True)
     id = models.AutoField(primary_key=True, editable=False)
